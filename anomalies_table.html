@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Anomalies Table</title>
+</head>
+<body>
+    <h1>Dental Anomalies Table</h1>
+    <table border="1">
+        <tr>
+            <th>Anomaly Type</th>
+            <th>Frequency</th>
+        </tr>
+        {% for data in anomaly_data %}
+            <tr>
+                <td>{{ data['type'] }}</td>
+                <td>{{ data['frequency'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

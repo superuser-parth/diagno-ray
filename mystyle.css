@@ -1,0 +1,22 @@
+.body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+#uploadInput {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.canvas {
+    display: block;
+    border: 1px solid #333;
+    margin-top: 20px;
+}
+
