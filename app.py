@@ -29,6 +29,7 @@ def detect():
     """
     buf = request.files["image_file"]
     boxes = detect_objects_on_image(Image.open(buf.stream))
+    print('detect endpoint getting hit')
     return Response(
       json.dumps(boxes),  
       mimetype='application/json'
@@ -52,5 +53,6 @@ def detect_objects_on_image(buf):
     return output
 
 
-
-serve(app, host='0.0.0.0', port=8081)
+if __name__ == "__main__":
+    from waitress import serve
+    serve(app, host='0.0.0.0', port=8081)
